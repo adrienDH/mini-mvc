@@ -3,6 +3,9 @@ class MainController {
 	
 	private $cssPaths = array();
 	private $jsPaths = array();
+	private $metaDescription = "";
+	private $metaTitle = "";
+	private $metaKeywords = "";
 	
 	// Inclusion des css dans la vue
 	public function addCssPaths(array $cssPaths = array()) {
@@ -22,5 +25,29 @@ class MainController {
 	// Inclusion du js dans le footer
 	public function getJsPaths() {
 		return $this->jsPaths;
+	}
+	
+	public function addMetaDescription($description) {
+		$this->metaDescription = $description;
+	}
+	
+	public function getMetaDescription() {
+		return $this->metaDescription;
+	}
+	
+	public function addMetaTitle($title) {
+		$this->metaTitle = $title;
+	}
+	
+	public function getMetaTitle() {
+		return $this->metaTitle;
+	}
+
+	public function addMetaKeywords($keywords) {
+		$this->metaKeywords = $keywords;
+	}
+	
+	public function getMetaKeywords() {
+		return $this->metaKeywords;
 	}
 }

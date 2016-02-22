@@ -1,4 +1,5 @@
 <?php 
+	$mainController->addMetaDescription("ma description");
 	$mainController->addCssPaths(array(
 		"./resources/css/home/home"
 	));
